@@ -66,7 +66,7 @@ defmodule Pinocchio.Command.Doc do
   end
 
   defp format_typespec(definition, kind, _nesting) do
-    IO.inspect("@#{kind} #{Macro.to_string(definition)}")
+    "@#{kind} #{Macro.to_string(definition)}"
   end
 
   defp format_callback(kind, name, key, callbacks) do
