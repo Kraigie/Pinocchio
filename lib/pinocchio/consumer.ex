@@ -4,7 +4,7 @@ defmodule Pinocchio.Consumer do
   alias Pinocchio.Command
 
   def start_link do
-    Consumer.start_link(__MODULE__)
+    Consumer.start_link(__MODULE__, max_restarts: 0)
   end
 
   def handle_event({:MESSAGE_CREATE, {msg}, _ws_state}) do
